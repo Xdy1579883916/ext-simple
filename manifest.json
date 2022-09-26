@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "ext-simple",
+  "description": "chrome extension",
+  "version": "0.0.1",
+  "background": {
+    "service_worker": "/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["/content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["/page-script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
